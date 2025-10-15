@@ -6,7 +6,7 @@ POST http://localhost:5000/api/auth/v1/register
 Content-Type: application/json
 
 {
-    "username": "benjamin",
+    "username": "benjamin2",
     "password": "123456"
 }
 
@@ -15,6 +15,38 @@ POST http://localhost:5000/api/auth/v1/login
 Content-Type: application/json
 
 {
-    "username": "benjamin",
+    "username": "benjamin2",
     "password": "123456"
 }
+
+###
+POST http://localhost:5000/api/posts/v1/create
+Content-type: application/json
+Authorization: Bear eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGVmNDc4NWJmNDBmNDBhNWIxNzUyMDAiLCJpYXQiOjE3NjA1MTE5MDN9.63x5lZzezo2nNe2yh0IKaj8iqXt8R44OijX1vradGa8
+
+{
+    "title": "sample post",
+    "description": "sample post",
+    "url": "youtube.com",
+    "status": "TO LEARN"
+}
+
+###
+GET http://localhost:5000/api/posts/v1/getAllPosts
+Authorization: Bear eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGVmNDc4NWJmNDBmNDBhNWIxNzUyMDAiLCJpYXQiOjE3NjA1MTE5MDN9.63x5lZzezo2nNe2yh0IKaj8iqXt8R44OijX1vradGa8
+
+###
+PUT http://localhost:5000/api/posts/v1/update/68ef4b4504f014d1e08aa105
+Content-type: application/json
+Authorization: Bear eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGVmNDc4NWJmNDBmNDBhNWIxNzUyMDAiLCJpYXQiOjE3NjA1MTE5MDN9.63x5lZzezo2nNe2yh0IKaj8iqXt8R44OijX1vradGa8
+
+{
+    "title": "Angular",
+    "description": "Learn Angular hook",
+    "url": "kungfutech.com",
+    "status": "TO LEARN"
+}
+
+###
+DELETE http://localhost:5000/api/posts/v1/delete/68ef4b4504f014d1e08aa105
+Authorization: Bear eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGVmNDc4NWJmNDBmNDBhNWIxNzUyMDAiLCJpYXQiOjE3NjA1MTE5MDN9.63x5lZzezo2nNe2yh0IKaj8iqXt8R44OijX1vradGa8
